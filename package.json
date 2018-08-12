@@ -1,12 +1,13 @@
 {
   "name": "zold",
+  "main": "lib/index.js",
   "description": "A configuration-based solution to form",
   "version": "0.0.1",
   "author": "zon<zqzhong1211@163.com>",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server -d --config config/webpack.dev.config.js",
-    "build": "webpack -p --hide-modules --config config/webpack.prod.config.js",
+    "build": "babel src -d lib",
     "lib": "npm run build && cp src/*.css lib",
     "release": "npm run lib && npm publish"
   },
@@ -16,21 +17,24 @@
     "form"
   ],
   "devDependencies": {
+    "antd": "^3.8.1",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.11",
+    "prop-types": "^15.6.2",
     "react-dom": "^16.3.0",
     "style-loader": "^0.20.3",
+    "superagent": "^3.8.3",
+    "superagent-jsonp": "^0.2.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1",
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "prop-types": "^15.6.1",
     "react": "^16.3.0"
   }
 }

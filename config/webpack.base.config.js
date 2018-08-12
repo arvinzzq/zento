@@ -1,10 +1,11 @@
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -22,6 +23,9 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin()
