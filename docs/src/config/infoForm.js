@@ -18,12 +18,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写姓名'
+              message: '请填写姓名'
             },
             extra: {
               props: {
                 placeholder: '请输入姓名',
-                width: 150
+                style: { width: 150 }
               }
             }
           }, {
@@ -34,12 +34,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写花名'
+              message: '请填写花名'
             },
             extra: {
               props: {
                 placeholder: '请输入花名',
-                width: 150
+                style: { width: 150 }
               }
             }
           }, {
@@ -50,12 +50,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写身份证号'
+              message: '请填写身份证号'
             },
             extra: {
               props: {
                 placeholder: '请输入身份证号',
-                width: 150
+                style: { width: 150 }
               }
             }
           }, {
@@ -66,12 +66,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写生日'
+              message: '请填写生日'
             },
             extra: {
               props: {
                 placeholder: '请选择生日',
-                width: 150
+                style: { width: 150 }
               }
             }
           }]
@@ -87,7 +87,12 @@ export default [
             rule: {
               required: true,
               type: 'number',
-              msg: '请填写身份证号'
+              message: '请选择性别'
+            },
+            extra: {
+              props: {
+                style: { width: 150 }
+              }
             }
           }, {
             type: 'field',
@@ -97,12 +102,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写星座'
+              message: '请填写星座'
             },
             extra: {
               props: {
                 placeholder: '请选择星座',
-                width: 150
+                style: { width: 150 }
               }
             }
           }, {
@@ -114,12 +119,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写政治面貌'
+              message: '请填写政治面貌'
             },
             extra: {
               props: {
                 placeholder: '请选择政治面貌',
-                width: 150
+                style: { width: 150 }
               }
             }
           }, {
@@ -130,12 +135,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写学历'
+              message: '请填写学历'
             },
             extra: {
               props: {
                 placeholder: '请你的学历',
-                width: 150
+                style: { width: 150 }
               }
             }
           }]
@@ -151,12 +156,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写首次工作日期'
+              message: '请填写首次工作日期'
             },
             extra: {
               props: {
                 placeholder: '请选择首次工作的日期',
-                width: 350
+                style: { width: 350 }
               }
             }
           }, {
@@ -168,12 +173,12 @@ export default [
             rule: {
               required: true,
               type: 'number',
-              msg: '请填写招行银行卡号'
+              message: '请填写招行银行卡号'
             },
             extra: {
               props: {
                 placeholder: '请输入招行银行卡号',
-                width: 350
+                style: { width: 350 }
               }
             }
           }]
@@ -200,7 +205,7 @@ export default [
               props: {
                 className: 'address-cascader-current',
                 placeholder: '请选择省、市、区',
-                width: 350
+                style: { width: 350 }
               }
             }
           }, {
@@ -211,12 +216,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写居住详细地址'
+              message: '请填写居住详细地址'
             },
             extra: {
               props: {
                 placeholder: '请输入居住详细地址',
-                width: 350
+                style: { width: 350 }
               }
             }
           }]
@@ -228,7 +233,7 @@ export default [
             type: 'field',
             label: '户口所在地区',
             name: 'hukouAddress', // 中国特色的东西 -> 户口 ~ 就用拼音吧
-            fieldType: 'hukouAddress',
+            fieldType: 'address',
             rule: [
               value => {
                 return value.length || '户口所在地区必须选择';
@@ -238,7 +243,7 @@ export default [
               props: {
                 className: 'address-cascader-hukou',
                 placeholder: '请选择省、市、区',
-                width: 350
+                style: { width: 350 }
               }
             }
           }, {
@@ -249,12 +254,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写户口详细地址'
+              message: '请填写户口详细地址'
             },
             extra: {
               props: {
                 placeholder: '请输入户口详细地址',
-                width: 350
+                style: { width: 350 }
               }
             }
           }]
@@ -270,7 +275,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写户口类型'
+              message: '请填写户口类型'
+            },
+            extra: {
+              props: {
+                style: { width: 150 }
+              }
             }
           }, {
             type: 'field',
@@ -280,7 +290,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写婚姻状况'
+              message: '请填写婚姻状况'
+            },
+            extra: {
+              props: {
+                style: { width: 150 }
+              }
             }
           }, {
             type: 'field',
@@ -290,7 +305,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写生育状况'
+              message: '请填写生育状况'
+            },
+            extra: {
+              props: {
+                style: { width: 150 }
+              }
             }
           }]
         }
@@ -310,12 +330,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写紧急联系人'
+              message: '请填写紧急联系人'
             },
             extra: {
               props: {
                 placeholder: '请输入紧急联系人姓名',
-                width: 200
+                style: { width: 200 }
               }
             }
           }, {
@@ -326,12 +346,12 @@ export default [
             rule: {
               required: true,
               type: 'number',
-              msg: '请填写紧急联系人电话'
+              message: '请填写紧急联系人电话'
             },
             extra: {
               props: {
                 placeholder: '请输入联系人电话',
-                width: 200
+                style: { width: 200 }
               }
             }
           }, {
@@ -343,12 +363,12 @@ export default [
             rule: {
               required: true,
               type: 'string',
-              msg: '请填写紧急联系人关系'
+              message: '请填写紧急联系人关系'
             },
             extra: {
               props: {
                 placeholder: '请输入联系人关系',
-                width: 200
+                style: { width: 200 }
               }
             }
           }]

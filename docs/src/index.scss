@@ -1,0 +1,12 @@
+.vertical-align--outer {
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .vertical-align--inner {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

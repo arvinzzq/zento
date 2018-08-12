@@ -20,7 +20,7 @@ export default class InfoSelect extends React.PureComponent {
     return (
       <Select {...this.props}>
         {this.props.options.map(option => (
-          <Option value={option.value}>{option.title}</Option>
+          <Option key={option.value} value={option.value}>{option.title}</Option>
         ))}
       </Select>
     );

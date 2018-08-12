@@ -9,7 +9,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets:['env', 'stage-0', 'react'],
+            presets: ['env', 'stage-0', 'react'],
+            plugins: [
+              ["import", { "libraryName": "antd" }]
+            ],
             "env": {
               "development" : {
                 "compact": false
@@ -21,6 +24,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
