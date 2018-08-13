@@ -8,6 +8,7 @@ Zento is a configuration-based solution to form.
 
 * [x] 表单配置化生成
 * [ ] 支持表单联动配置
+* [ ] 支持更细粒度的表单元素的动态控制
 
 ## Background
 
