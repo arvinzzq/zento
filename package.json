@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server -d --config config/webpack.dev.config.js",
+    "doc": "webpack -p --config config/webpack.prod.config.js",
     "build": "babel src -d lib",
-    "lib": "npm run build && cp src/*.css lib",
-    "release": "npm run lib && npm publish"
+    "release": "npm run build && npm publish"
   },
   "keywords": [
     "configuration-based",
