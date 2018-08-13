@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Button, Form } from 'antd';
 import FormCreator from '../../src/formCreator';
-import fieldNameRuleCreator from '../../src/fieldNameRuleCreator';
 import fieldComponentCreator from '../../src/fieldComponentCreator';
 import Tabs from './components/Tabs';
 import infoForm from './config/infoForm';
@@ -13,8 +12,6 @@ import 'antd/dist/antd.css';
 import './index.scss';
 
 const FormItem = Form.Item;
-
-const { fieldNames } = fieldNameRuleCreator(fieldInitValueMap)(infoForm);
 const fieldCreator = fieldComponentCreator(componentMap, formFieldOptions);
 const formFieldRender = (bindField, config) => {
   const { label, name, fieldType, extra, rule } = config;
@@ -26,9 +23,7 @@ const formFieldRender = (bindField, config) => {
      </FormItem>
   );
 };
-
 const formCreator = new FormCreator({ formFieldRender });
-
 const getStyleWrapper = () => ({
   padding: 30,
   boxSizing: 'border-box',
@@ -40,10 +35,7 @@ const getStyleWrapper = () => ({
 class Hello extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activeIndex: 0,
-      ...fieldNames
-    };
+    this.state = { activeIndex: 0 };
   }
 
   handlePanelClick = activeIndex => this.state.activeIndex !== activeIndex && this.setState({ activeIndex })
@@ -63,6 +55,7 @@ class Hello extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <div style={getStyleWrapper()}>
+        <h1 style={{ textAlign: 'center', paddingBottom: 20 }}>Zento 🍱</h1>
         <Tabs data={infoForm} activeIndex={activeIndex} handlePanelClick={this.handlePanelClick} />
         <Form layout="inline">
           {formCreator.create(infoForm, getFieldDecorator, [activeIndex])}

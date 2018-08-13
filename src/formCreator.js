@@ -15,7 +15,7 @@ class FormCreator {
     if (configs && !(configs instanceof Array)) {
       throw new Error('Configs must be array');
     }
-    // why does this lost here ~ ?
+    // why does this lost here ~ ? TBD
     return configs.map((config, index) => formElementMap(
       this.create.bind(this),
       this.formFieldRender,

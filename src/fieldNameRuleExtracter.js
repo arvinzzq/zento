@@ -2,7 +2,7 @@ import Traverser from './traverser';
 
 const traverser = new Traverser();
 
-const fieldNameRuleCreator = fieldInitValueMap => infoFormConfig => {
+const fieldNameRuleExtracter = fieldInitValueMap => infoFormConfig => {
   const fieldNames = {};
   const fieldRules = {};
   traverser.dfs(infoFormConfig).filter(item => item.type === 'field').forEach(field => {
@@ -15,4 +15,4 @@ const fieldNameRuleCreator = fieldInitValueMap => infoFormConfig => {
   };
 };
 
-export default fieldNameRuleCreator;
+export default fieldNameRuleExtracter;
