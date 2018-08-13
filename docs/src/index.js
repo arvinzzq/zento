@@ -8,7 +8,6 @@ import infoForm from './config/infoForm';
 import fieldInitValueMap from './config/fieldInitValueMap';
 import componentMap from './config/componentMap';
 import formFieldOptions from './config/formFieldOptions';
-import 'antd/dist/antd.css';
 import './index.scss';
 
 const FormItem = Form.Item;

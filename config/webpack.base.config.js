@@ -11,7 +11,7 @@ module.exports = {
           options: {
             presets: ['env', 'stage-0', 'react'],
             plugins: [
-              ["import", { "libraryName": "antd" }]
+              ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
             ],
             "env": {
               "development" : {
