@@ -197,9 +197,13 @@ export default [
             name: 'currentAddress',
             fieldType: 'address',
             rule: [
-              value => {
-                return value.length || '居住所在地区必须选择';
-              }
+              {validator(rule, value, callback) {
+                if (value instanceof Array && value.length > 0) {
+                  callback();
+                } else {
+                  callback('请选择居住地');
+                }
+              }}
             ],
             extra: {
               props: {
@@ -235,9 +239,13 @@ export default [
             name: 'hukouAddress', // 中国特色的东西 -> 户口 ~ 就用拼音吧
             fieldType: 'address',
             rule: [
-              value => {
-                return value.length || '户口所在地区必须选择';
-              }
+              {validator(rule, value, callback) {
+                if (value instanceof Array && value.length > 0) {
+                  callback();
+                } else {
+                  callback('请选择户口所在地');
+                }
+              }}
             ],
             extra: {
               props: {

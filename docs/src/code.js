@@ -10,7 +10,7 @@ const formFieldRender = (bindField, config) => {
   return (
     <FormItem colon label={label}>
        {bindField(name, {
-         rules: [rule],
+          rules: rule instanceof Array ? rule : [rule],
        })(fieldCreator(fieldType, name, extra))}
      </FormItem>
   );

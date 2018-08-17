@@ -19,14 +19,14 @@ const formFieldRender = (bindField, config) => {
   return (
     <FormItem colon label={label}>
        {bindField(name, {
-         rules: [rule],
+         rules: rule instanceof Array ? rule : [rule],
        })(fieldCreator(fieldType, name, extra))}
      </FormItem>
   );
 };
 const formCreator = new FormCreator({ formFieldRender });
 
-const infoFormCode = JSON.stringify(infoForm, null, 2);
+const infoFormCode = JSON.stringify(infoForm, (k,v) => typeof v === "function" ? v.toString() : v, 2).replace(/\\n/g, '\n\t\t\t');
 const formFieldOptionsCode = JSON.stringify(formFieldOptions, null, 2);
 
 class Hello extends React.Component {
