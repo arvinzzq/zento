@@ -8,5 +8,5 @@ export {
   fieldComponentCreator,
   fieldNameRuleCreator,
   fieldSymbols,
-  formCreator
+  FormCreator
 };
