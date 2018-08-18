@@ -3,7 +3,7 @@ import { Cascader, message } from 'antd';
 import PropTypes from 'prop-types';
 import fetch from 'superagent';
 import jsonp from 'superagent-jsonp';
-import { FIELD_CUSTOMIZED } from '../../../src/fieldSymbols';
+import { FIELD_CUSTOMIZED } from '../../../lib/fieldSymbols';
 
 const MESSAGE_DURATION = 5;
 const foreignCode = '990000';

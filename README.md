@@ -26,18 +26,18 @@ Zento is a configuration-based solution to form.
 
 对这种不稳定需求，浪费生命在无限的改动上面是对时间的极大的不尊重...所以配置化的生成表单是一定要做了的...
 
-zento是一个简单的基于配置的表单生成器，基础布局为grid的网格表单，支持自定义至每个field的样式，支持参数校验规则定义，等，TBD
+zento是一个简单的基于配置的表单生成器，基础布局为根据每行元素自动等分的网格表单，样式可以通过自动定义参数可覆盖，支持自定义至每个field的样式，支持参数校验规则定义，等，TBD
 
 zento目前的主要价值就是解决了这次的这个不稳定需求。
 
 ## Usage
 
-主要提供两个方法：
+主要提供：
 
 * fieldComponentCreator // 根据配置生成对应的form的表单项的组件
-* formCreator // 根据定义的field和表单配置生成带有布局的表单
+* FormCreator // 根据定义的field和表单配置生成带有布局的表单
 
-此外，fieldNameRuleExtracter方法是用于根据表单配置以及fieldInitValudMap配置提取rules列表和name及对应的初始值的对象的数组（有些表单组件的抽象可能需要这两个数组，公司内部封装的就是这样~，我不喜欢，但是目前没时间写）；fieldSymbols定义了两种symbol类型 FIELD_CUSTOMIZED, FIELD_OPTIONS；traverser是一个遍历用的方法类，支持bfs和dfs，只是给fieldNameRuleExtracter用的。
+此外，fieldNameRuleExtracter方法是用于根据表单配置以及fieldInitValudMap配置提取rules数组和name及对应的初始值的对象的数组（有些表单组件的抽象可能需要这两个数组，公司内部封装的就是这样~，我不喜欢，但是目前没时间写）；fieldSymbols定义了两种symbol类型 FIELD_CUSTOMIZED, FIELD_OPTIONS；traverser是一个遍历用的方法类，支持bfs和dfs，只是给fieldNameRuleExtracter用的。
 
 目前支持
 

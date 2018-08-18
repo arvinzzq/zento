@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Radio } from 'antd';
-import { FIELD_OPTIONS } from '../../../src/fieldSymbols';
+import { FIELD_OPTIONS } from '../../../lib/fieldSymbols';
 
 const RadioGroup = Radio.Group;
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import { FIELD_CUSTOMIZED, FIELD_OPTIONS } from './fieldSymbols';
+import fieldSymbols from './fieldSymbols';
+
+const { FIELD_CUSTOMIZED, FIELD_OPTIONS } = fieldSymbols;
 
 const fieldComponentCreator = (componentMap, formFieldOptions) => (type, name, extra = {}) => {
   const Component = componentMap[type];

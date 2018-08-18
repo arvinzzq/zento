@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Select } from 'antd';
-import { FIELD_OPTIONS } from '../../../src/fieldSymbols';
+import { FIELD_OPTIONS } from '../../../lib/fieldSymbols';
 
 const Option = Select.Option;
 
